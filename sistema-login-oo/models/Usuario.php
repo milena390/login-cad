@@ -4,12 +4,17 @@ class Usuario {
     // Propriedades privadas para encapsular os dados do usuário
     private $id;          // Identificador único do usuário (geralmente autoincrementado no banco)
     private $email;       // E-mail do usuário (usado como login/identificador único)
+    private $nomeC;       //nome do usuário
     private $senha_hash;  // Senha do usuário armazenada de forma segura (hash)
     private $created_at;  // Data/hora de criação do usuário (geralmente definida pelo banco)
 
     // Getters (métodos para acessar os valores das propriedades)
     public function getId() { 
         return $this->id; 
+    }
+
+    public function getNomeC() { 
+        return $this->nomeC; 
     }
 
     public function getEmail() { 
@@ -28,6 +33,10 @@ class Usuario {
     }
 
     // Setters (métodos para definir/modificar os valores das propriedades)
+    public function setNomeC($nomeC) { 
+        $this->nomeC = $nomeC; 
+    }
+
     public function setEmail($email) { 
         $this->email = $email; 
     }
